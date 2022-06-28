@@ -32,10 +32,11 @@ schema_view = get_schema_view(
       license=openapi.License(name="BSD License"),
    ),
    public=True,
-   permission_classes=[permissions.AllowAny],
+   permission_classes=[permissions.AllowAny]
 )
 
 from app.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path("home/", HomeViewSet.as_view(), name="home"),
@@ -45,4 +46,7 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 
 ]
+
+
 # urlpatterns = format_suffix_paatterns(urlpatterns, allowed=['json'])
+

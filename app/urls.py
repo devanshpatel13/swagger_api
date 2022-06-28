@@ -14,4 +14,6 @@ router.register("swaggerapi", CreateView , basename = "create")
 urlpatterns = [
 
     path('', include(router.urls)),
+
+
 ]
