@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'drf_yasg',
+    'drf_yasg2',
     'rest_framework',
     'app',
 ]
@@ -124,3 +124,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SWAGGER_SETTINGS = {
+    # added custom tag to group api endpoints
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'app.swagger_tags.CustomSwaggerAutoSchema',
+
+}

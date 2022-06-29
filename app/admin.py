@@ -7,3 +7,8 @@ from .models import *
 @admin.register(Student)
 class StudentAdmin(admin.ModelAdmin):
     list_display =['id','name','std']
+
+
+@admin.register(Teacher)
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ["name","subj","phone"]

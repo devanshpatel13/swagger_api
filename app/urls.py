@@ -9,11 +9,12 @@ from rest_framework_swagger.views import get_swagger_view
 from rest_framework import routers
 #
 router = routers.DefaultRouter()
-router.register("swaggerapi", CreateView , basename = "create")
+router.register("student", StudentViewSet , basename = "create")
+router.register("teacher", TeacherViewSet , basename = "teacher")
 
 urlpatterns = [
 
     path('', include(router.urls)),
-
+    path('auth', include('rest_framework.urls', namespace='rest_framework')),
 
 ]
